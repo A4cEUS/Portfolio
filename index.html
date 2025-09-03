@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aryan Singh — Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    /* Scroll animation states */
+    .reveal { opacity: 0; transform: translateY(60px); transition: all 0.8s cubic-bezier(.17,.67,.83,.67); }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal.hidden-again { opacity: 0; transform: translateY(60px); }
+
+    /* Stagger letters */
+    .stagger span { opacity: 0; display: inline-block; transform: translateY(20px); transition: all 0.5s ease; }
+    .stagger span.visible { opacity: 1; transform: translateY(0); }
+
+    /* Skills hover */
+    .chip { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .chip:hover { transform: scale(1.15) rotate(-2deg); box-shadow: 0 10px 25px rgba(96,165,250,0.6); }
+
+    /* Projects hover tilt */
+    .card-hover { transition: transform 0.5s ease, box-shadow 0.5s ease; }
+    .card-hover:hover { transform: perspective(800px) rotateX(6deg) rotateY(-6deg) scale(1.05); box-shadow: 0 20px 40px rgba(96,165,250,0.4); }
+  </style>
+</head>
+<body class="bg-gradient-to-b from-black via-gray-900 to-gray-950 text-gray-200 font-sans overflow-x-hidden">
+
+  <div class="max-w-6xl mx-auto px-6 py-10">
+
+    <!-- Hero -->
+    <header class="flex flex-col md:flex-row justify-between items-center gap-8 min-h-[70vh]">
+      <div>
+        <h1 class="stagger text-5xl md:text-6xl font-extrabold">Aryan Singh</h1>
+        <p class="mt-3 text-gray-400 text-xl reveal">Software Developer • Full-stack with AI</p>
+        <p class="mt-2 text-sm text-gray-400 reveal">
+          Bengaluru, India · 
+          <a href="mailto:as1380067@gmail.com" class="text-blue-400 hover:underline">as1380067@gmail.com</a> · 
+          <a href="tel:+917033864646" class="text-blue-400 hover:underline">+91 70338 64646</a> · 
+          <a href="https://www.linkedin.com/in/aryan-singh-a435471bb/" target="_blank" class="text-blue-400 hover:underline">LinkedIn</a>
+        </p>
+        <div class="mt-6 flex gap-3 reveal">
+          <a href="#projects" class="px-6 py-3 bg-blue-500 hover:bg-blue-600 rounded-xl font-medium shadow-lg">View Projects</a>
+          <a href="#experience" class="px-6 py-3 bg-gray-700 hover:bg-gray-600 rounded-xl font-medium">Experience</a>
+        </div>
+      </div>
+      <div class="w-48 h-48 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-full shadow-2xl scale-90 reveal"></div>
+    </header>
+
+    <!-- Skills -->
+    <section id="skills" class="bg-gray-900/40 rounded-3xl p-8 mt-16 backdrop-blur reveal">
+      <h2 class="text-2xl font-semibold mb-4">Technical Skills</h2>
+      <div class="flex flex-wrap gap-3">
+        <span class="chip px-4 py-2 bg-gray-800 rounded-full text-sm shadow-md">TypeScript</span>
+        <span class="chip px-4 py-2 bg-gray-800 rounded-full text-sm shadow-md">JavaScript</span>
+        <span class="chip px-4 py-2 bg-gray-800 rounded-full text-sm shadow-md">Java</span>
+        <span class="chip px-4 py-2 bg-gray-800 rounded-full text-sm shadow-md">Python</span>
+        <span class="chip px-4 py-2 bg-gray-800 rounded-full text-sm shadow-md">Angular</span>
+        <span class="chip px-4 py-2 bg-gray-800 rounded-full text-sm shadow-md">RAG</span>
+        <span class="chip px-4 py-2 bg-gray-800 rounded-full text-sm shadow-md">Generative AI</span>
+        <span class="chip px-4 py-2 bg-gray-800 rounded-full text-sm shadow-md">Spring</span>
+        <span class="chip px-4 py-2 bg-gray-800 rounded-full text-sm shadow-md">Kafka</span>
+        <span class="chip px-4 py-2 bg-gray-800 rounded-full text-sm shadow-md">MySQL</span>
+        <span class="chip px-4 py-2 bg-gray-800 rounded-full text-sm shadow-md">MongoDB</span>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="bg-gray-900/40 rounded-3xl p-8 mt-16 backdrop-blur reveal">
+      <h2 class="text-2xl font-semibold mb-6">Experience</h2>
+      <div class="space-y-8">
+        <div class="reveal">
+          <h3 class="font-bold text-lg">Software Engineer — CGI</h3>
+          <p class="text-sm text-gray-400">Bengaluru · Jun 2023 — Present</p>
+          <ul class="list-disc list-inside text-gray-300 text-sm mt-2 space-y-1">
+            <li>Built features for a Digital Wealth Platform with Angular & Spring Boot.</li>
+            <li>Developed REST APIs, integrated MySQL, and custom ingestion with BeanIO.</li>
+            <li>Co-built AI model generating HTML/SCSS from design systems.</li>
+            <li>Led adoption of Agentic AI, RAG, and Generative AI internally.</li>
+          </ul>
+        </div>
+        <div class="reveal">
+          <h3 class="font-bold text-lg">Full-time Intern — HighRadius</h3>
+          <p class="text-sm text-gray-400">Bhubaneswar · Mar 2022 — Aug 2022</p>
+          <ul class="list-disc list-inside text-gray-300 text-sm mt-2 space-y-1">
+            <li>React (Material UI) front-end; Java/JDBC/Servlets back-end.</li>
+            <li>Integrated ML model predicting payment dates for invoices.</li>
+          </ul>
+        </div>
+        <div class="reveal">
+          <h3 class="font-bold text-lg">Winter Intern — HighRadius</h3>
+          <p class="text-sm text-gray-400">Bhubaneswar · Dec 2021 — Feb 2022</p>
+          <ul class="list-disc list-inside text-gray-300 text-sm mt-2 space-y-1">
+            <li>Built an interactive analytics dashboard for EDA and decision support.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="bg-gray-900/40 rounded-3xl p-8 mt-16 backdrop-blur reveal">
+      <h2 class="text-2xl font-semibold mb-6">Projects</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="p-6 bg-gray-800 rounded-2xl shadow-xl card-hover">
+          <strong class="text-blue-400 block mb-2">AI-Enabled Full-Stack App</strong>
+          <p class="text-sm text-gray-300">React UI with JDBC/JSP back-end and ML model predicting B2B payment behavior.</p>
+        </div>
+        <div class="p-6 bg-gray-800 rounded-2xl shadow-xl card-hover">
+          <strong class="text-blue-400 block mb-2">Design-System Codegen</strong>
+          <p class="text-sm text-gray-300">AI model generating HTML/SCSS aligned to design systems for dev efficiency.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="bg-gray-900/40 rounded-3xl p-8 mt-16 backdrop-blur reveal">
+      <h2 class="text-2xl font-semibold mb-4">Education</h2>
+      <p><strong>KIIT, Bhubaneswar</strong> — B.Tech in Electronics & Telecommunication (2019 — 2023)</p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center text-gray-500 text-sm mt-20 mb-6">
+      © <span id="year"></span> Aryan Singh · Built with Tailwind CSS
+    </footer>
+
+  </div>
+
+  <script>
+    // Year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Scroll reveal both ways
+    const reveals = document.querySelectorAll(".reveal");
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          entry.target.classList.remove("hidden-again");
+        } else {
+          entry.target.classList.remove("visible");
+          entry.target.classList.add("hidden-again");
+        }
+      });
+    }, { threshold: 0.2 });
+    reveals.forEach(el => observer.observe(el));
+
+    // Stagger hero letters
+    const hero = document.querySelector(".stagger");
+    const letters = hero.textContent.trim().split("");
+    hero.textContent = "";
+    letters.forEach((ch, i) => {
+      const span = document.createElement("span");
+      span.textContent = ch;
+      hero.appendChild(span);
+      setTimeout(() => span.classList.add("visible"), i * 90);
+    });
+  </script>
+
+</body>
+</html>
